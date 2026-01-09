@@ -8,7 +8,7 @@ export default function Mission() {
               Our Mission
             </h2>
             <p className="text-xl text-gray-600">
-              Breaking down barriers to make God's Word accessible to everyone
+              Breaking down barriers to make God&apos;s Word accessible to everyone
             </p>
           </div>
 
@@ -23,7 +23,7 @@ export default function Mission() {
                 designed from the ground up with accessibility in mind.
               </p>
               <p className="text-gray-600 leading-relaxed">
-                Whether you're neurodiverse, prefer different learning styles, or need assistive 
+                Whether you&apos;re neurodiverse, prefer different learning styles, or need assistive 
                 technologies, our tools adapt to serve you better.
               </p>
             </div>
@@ -57,8 +57,8 @@ export default function Mission() {
                 Join Our Journey
               </h3>
               <p className="text-primary-100 mb-6 max-w-2xl mx-auto">
-                We're building these tools in community. Your feedback, ideas, and participation 
-                help shape apps that truly serve everyone's needs.
+                We&apos;re building these tools in community. Your feedback, ideas, and participation 
+                help shape apps that truly serve everyone&apos;s needs.
               </p>
               <a href="#contact" className="bg-white text-primary-600 font-medium px-6 py-3 rounded-lg hover:bg-gray-50 transition-colors duration-200 inline-block">
                 Get Involved

@@ -65,7 +65,7 @@ export default function Hero() {
           
           <p className={`text-xl md:text-2xl text-gray-600 mb-12 leading-relaxed max-w-4xl mx-auto transition-all duration-1000 delay-800 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             Innovative bible study tools designed to help people of all abilities 
-            go deeper in their understanding of God's Word through thoughtful design and AI.
+            go deeper in their understanding of God&apos;s Word through thoughtful design and AI.
           </p>
           
           {/* Interactive buttons */}
