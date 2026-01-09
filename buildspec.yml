@@ -1,0 +1,42 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 18
+    commands:
+      - echo Installing dependencies...
+      - npm ci
+      
+  pre_build:
+    commands:
+      - echo Running pre-build checks...
+      - npm run lint
+      - echo Running TypeScript checks...
+      - npx tsc --noEmit
+      - echo Running security audit...
+      - npm audit --audit-level moderate
+      
+  build:
+    commands:
+      - echo Building the application...
+      - npm run build
+      - echo Build completed successfully
+      
+  post_build:
+    commands:
+      - echo Running post-build tasks...
+      - echo Generating build info...
+      - echo "Build completed at $(date)" > out/build-info.txt
+      - echo "Commit: $CODEBUILD_RESOLVED_SOURCE_VERSION" >> out/build-info.txt
+      
+artifacts:
+  files:
+    - '**/*'
+  base-directory: out
+  name: bible-apps-website-$(date +%Y-%m-%d-%H-%M-%S)
+  
+cache:
+  paths:
+    - node_modules/**/*
+    - .next/cache/**/*
