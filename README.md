@@ -6,11 +6,10 @@ A modern JAMstack website showcasing our ecosystem of accessible bible study app
 
 - **Neurodiverse Bible App** - Accessible bible reading for all cognitive abilities
 - **Scriptura.AI** - AI-powered scripture research assistant  
-- **Agentic AI Bible Research** - Advanced tools for biblical scholars
 
 ## Tech Stack
 
-- Next.js 14 with App Router
+- Next.js 16 with App Router
 - TypeScript
 - Tailwind CSS
 - Static export ready for JAMstack deployment
@@ -33,3 +32,9 @@ The site exports as static files in the `out/` directory, ready for deployment t
 ## Mission
 
 Making scripture accessible to everyone through thoughtful design and innovative technology that serves people of all abilities and learning styles.
+
+## CI/CD Pipeline Active
+
+Automated deployments via GitHub Actions:
+- Push to `develop` → deploys to staging
+- Push to `main` → deploys to production
