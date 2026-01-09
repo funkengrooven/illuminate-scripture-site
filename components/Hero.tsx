@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import AnimatedText from './AnimatedText'
 
 export default function Hero() {
   const [scrollY, setScrollY] = useState(0)
@@ -13,6 +14,8 @@ export default function Hero() {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+
+  const animatedWords = ['Accessible', 'Enjoyable', 'Applicable']
 
   return (
     <section className="relative bg-gradient-to-br from-primary-50 via-white to-accent-50 py-20 lg:py-32 overflow-hidden min-h-screen flex items-center">
@@ -44,13 +47,16 @@ export default function Hero() {
             Building the future of accessible scripture study
           </div>
           
-          {/* Dynamic heading with staggered animation */}
+          {/* Dynamic heading with animated text */}
           <div className="mb-8">
             <h1 className={`text-5xl md:text-8xl font-bold text-gray-900 leading-tight transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               Making Scripture
             </h1>
             <h1 className={`text-5xl md:text-8xl font-bold leading-tight transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-              <span className="gradient-text">Accessible</span> to
+              <AnimatedText 
+                words={animatedWords} 
+                className="gradient-text"
+              /> to
             </h1>
             <h1 className={`text-5xl md:text-8xl font-bold text-gray-900 leading-tight transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               Everyone
