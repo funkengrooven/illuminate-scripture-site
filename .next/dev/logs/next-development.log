@@ -207,3 +207,4 @@ Import trace:
   Server Component:
     ./components/Apps.tsx
     ./app/page.tsx
+[39:29:58.058] Server  LOG     ✓ Compiled in 415ms
